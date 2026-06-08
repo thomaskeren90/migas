@@ -4,295 +4,1130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PT Goodyear Nusantara Energy — Oil & Gas Services</title>
-    <meta name="description" content="Oil and Gas Exploration, Mechanical Construction and Civil Construction Support Services Company Indonesia. SKK Migas registered.">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <meta name="description" content="PT Goodyear Nusantara Energy provides seismic exploration, mechanical construction, and civil construction services for Indonesia's oil & gas industry.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background: #fff; overflow-x: hidden; }
-        nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10,10,30,0.92); backdrop-filter: blur(16px); padding: 0 6%; height: 76px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); }
-        nav .logo { font-weight: 800; font-size: 14px; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
-        nav .logo span { color: #d4a017; }
-        nav .nav-links { display: flex; gap: 32px; align-items: center; }
-        nav .nav-links a { text-decoration: none; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 500; transition: .3s; letter-spacing: 0.5px; text-transform: uppercase; }
-        nav .nav-links a:hover { color: #d4a017; }
-        nav .nav-cta { background: #d4a017; color: #0a0a1a !important; padding: 10px 24px; border-radius: 6px; font-weight: 600 !important; }
-        .menu-toggle { display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: #fff; }
-        @media (max-width: 900px) { .menu-toggle { display: block; } .nav-links { display: none !important; } .nav-links.active { display: flex !important; flex-direction: column; position: absolute; top: 76px; left: 0; width: 100%; background: rgba(10,10,30,0.98); padding: 24px 6%; gap: 16px; } }
-        .hero { min-height: 100vh; display: flex; align-items: center; position: relative; background: linear-gradient(135deg, #070714 0%, #12123a 40%, #0a0a20 100%); overflow: hidden; }
-        .hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a017' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); opacity: 0.5; }
-        .hero-content { position: relative; z-index: 1; padding: 0 6%; max-width: 1400px; width: 100%; }
-        .hero-badge { display: inline-block; padding: 8px 20px; border-radius: 100px; background: rgba(212,160,23,0.12); border: 1px solid rgba(212,160,23,0.2); color: #d4a017; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 28px; }
-        .hero h1 { font-size: clamp(36px, 6vw, 72px); font-weight: 800; color: #fff; line-height: 1.08; margin-bottom: 24px; max-width: 800px; }
-        .hero h1 span { color: #d4a017; }
-        .hero p { font-size: 18px; color: rgba(255,255,255,0.55); max-width: 600px; line-height: 1.8; margin-bottom: 40px; }
-        .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-        .btn { padding: 16px 36px; border-radius: 8px; font-weight: 600; font-size: 14px; text-decoration: none; transition: all .3s; display: inline-flex; align-items: center; gap: 8px; }
-        .btn-primary { background: #d4a017; color: #0a0a1a; }
-        .btn-primary:hover { background: #e6b42a; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,160,23,0.3); }
-        .btn-outline { border: 2px solid rgba(255,255,255,0.15); color: #fff; }
-        .btn-outline:hover { border-color: #d4a017; color: #d4a017; background: rgba(212,160,23,0.05); }
-        .hero-strip { display: flex; gap: 60px; margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.06); }
-        .hero-strip strong { display: block; font-size: 28px; color: #d4a017; font-weight: 800; }
-        .hero-strip span { font-size: 13px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; }
-        @media (max-width: 600px) { .hero-strip { flex-wrap: wrap; gap: 30px; } }
-        section { padding: 120px 6%; }
-        .section-label { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #d4a017; font-weight: 600; margin-bottom: 12px; }
-        .section-title h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: 800; color: #1a1a2e; margin-bottom: 16px; line-height: 1.2; }
-        .section-title p { color: #888; max-width: 560px; font-size: 16px; line-height: 1.8; }
-        #about { background: #f8f9fc; }
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; max-width: 1200px; margin: 0 auto; align-items: center; }
-        .about-text p { color: #666; line-height: 1.9; margin-bottom: 20px; font-size: 15px; }
-        .about-text .highlight { background: #fff; padding: 24px; border-radius: 12px; border-left: 4px solid #d4a017; margin: 24px 0; }
-        .about-text .highlight p { margin-bottom: 0; font-size: 14px; color: #555; font-style: italic; }
-        .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-        .about-stat { text-align: center; padding: 32px 20px; background: #fff; border-radius: 16px; box-shadow: 0 2px 20px rgba(0,0,0,0.04); }
-        .about-stat .num { font-size: 40px; font-weight: 800; color: #d4a017; font-family: 'Playfair Display', serif; }
-        .about-stat .lbl { font-size: 13px; color: #888; margin-top: 4px; }
-        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
-        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1200px; margin: 40px auto 0; }
-        .service-card { background: #fff; border-radius: 20px; padding: 44px 36px; box-shadow: 0 2px 30px rgba(0,0,0,0.04); border: 1px solid #f0f0f0; transition: all .4s; position: relative; overflow: hidden; }
-        .service-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #d4a017, #e6b42a); transform: scaleX(0); transform-origin: left; transition: transform .4s; }
-        .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
-        .service-card:hover::after { transform: scaleX(1); }
-        .service-card .num { font-family: 'Playfair Display', serif; font-size: 48px; color: #f0f0f0; font-weight: 700; margin-bottom: 8px; line-height: 1; }
-        .service-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 14px; color: #1a1a2e; }
-        .service-card p { color: #888; font-size: 14px; line-height: 1.7; margin-bottom: 20px; }
-        .service-card ul { list-style: none; }
-        .service-card ul li { padding: 7px 0; font-size: 13px; color: #666; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #f5f5f5; }
-        .service-card ul li:last-child { border-bottom: none; }
-        .service-card ul li::before { content: '→'; color: #d4a017; font-weight: 700; }
-        @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
-        #projects { background: #f8f9fc; }
-        .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1200px; margin: 40px auto 0; }
-        .project-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.04); transition: .4s; }
-        .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
-        .project-img { height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #1a1a3e, #2a2a5e); color: #d4a017; font-weight: 600; font-size: 13px; }
-        .project-img .region { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 8px; }
-        .project-img .icon { font-size: 32px; margin-bottom: 8px; }
-        .project-info { padding: 24px; }
-        .project-info h4 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
-        .project-info p { font-size: 13px; color: #888; line-height: 1.6; }
-        .project-info .tag { display: inline-block; padding: 4px 10px; border-radius: 4px; background: #fef3e2; color: #d4a017; font-size: 11px; font-weight: 600; margin-top: 10px; }
-        @media (max-width: 900px) { .projects-grid { grid-template-columns: 1fr; } }
-        #certifications { text-align: center; }
-        .cert-grid { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
-        .cert-item { text-align: center; padding: 30px 40px; border-radius: 12px; background: #f8f9fc; min-width: 160px; }
-        .cert-item .icon { font-size: 36px; margin-bottom: 12px; }
-        .cert-item h4 { font-size: 14px; font-weight: 600; color: #1a1a2e; }
-        #contact { background: linear-gradient(135deg, #070714, #12123a); color: #fff; padding: 120px 6% 80px; }
-        #contact .section-label { color: #d4a017; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; max-width: 1200px; margin: 40px auto 0; }
-        .contact-info p { color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 32px; font-size: 15px; max-width: 500px; }
-        .contact-detail { display: flex; gap: 16px; margin-bottom: 20px; }
-        .contact-detail .icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(212,160,23,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
-        .contact-detail .text strong { display: block; font-size: 14px; margin-bottom: 2px; color: #fff; }
-        .contact-detail .text span { font-size: 14px; color: rgba(255,255,255,0.55); }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 16px 18px; border-radius: 10px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; color: #fff; margin-bottom: 16px; transition: .3s; }
-        .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,0.3); }
-        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: #d4a017; background: rgba(212,160,23,0.06); }
-        .contact-form textarea { height: 120px; resize: vertical; }
-        .contact-form button { width: 100%; padding: 16px; border: none; border-radius: 10px; background: #d4a017; color: #0a0a1a; font-weight: 700; font-size: 15px; cursor: pointer; transition: .3s; }
-        .contact-form button:hover { background: #e6b42a; }
-        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
-        footer { background: #03030a; color: rgba(255,255,255,0.4); padding: 40px 6%; text-align: center; font-size: 13px; }
-        footer .social { display: flex; gap: 16px; justify-content: center; margin-bottom: 20px; }
-        footer .social a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; text-decoration: none; color: rgba(255,255,255,0.4); transition: .3s; font-size: 16px; }
-        footer .social a:hover { background: #d4a017; color: #0a0a1a; }
-        footer p { margin-bottom: 4px; }
+        /* ========================================
+                   RESET & BASE
+                ======================================== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0e1a;
+            color: #e0e4f0;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ========================================
+                   TYPOGRAPHY
+                ======================================== */
+        h1, h2, h3, h4, h5 {
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #ffffff;
+        }
+        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); letter-spacing: -0.02em; }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.015em; }
+        h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+        .section-label {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #c8a45c;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .gold-accent { color: #c8a45c; }
+
+        /* ========================================
+                   BUTTONS
+                ======================================== */
+        .btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 14px 32px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #c8a45c, #a8853a);
+            color: #0a0e1a;
+            box-shadow: 0 4px 20px rgba(200, 164, 92, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(200, 164, 92, 0.4);
+        }
+        .btn-outline {
+            background: transparent;
+            color: #c8a45c;
+            border: 1.5px solid #c8a45c;
+        }
+        .btn-outline:hover {
+            background: rgba(200, 164, 92, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* ========================================
+                   SECTION COMMON
+                ======================================== */
+        section { padding: 100px 0; }
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 60px;
+        }
+        .section-header p {
+            color: #8892a6;
+            font-size: 1.1rem;
+            margin-top: 16px;
+        }
+
+        /* ========================================
+                   HERO
+                ======================================== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 120px 0 80px;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 20% 50%, rgba(200, 164, 92, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 80% at 80% 20%, rgba(20, 60, 120, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse 100% 100% at 50% 100%, rgba(10, 14, 26, 1) 0%, transparent 40%);
+        }
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(200, 164, 92, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(200, 164, 92, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+        .hero-particles span {
+            position: absolute;
+            width: 3px; height: 3px;
+            background: rgba(200, 164, 92, 0.3);
+            border-radius: 50%;
+            animation: float 15s infinite;
+        }
+        .hero-particles span:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+        .hero-particles span:nth-child(2) { top: 40%; left: 80%; animation-delay: 2s; width: 4px; height: 4px; }
+        .hero-particles span:nth-child(3) { top: 70%; left: 30%; animation-delay: 4s; }
+        .hero-particles span:nth-child(4) { top: 10%; left: 60%; animation-delay: 6s; width: 5px; height: 5px; }
+        .hero-particles span:nth-child(5) { top: 60%; left: 90%; animation-delay: 8s; }
+        .hero-particles span:nth-child(6) { top: 85%; left: 15%; animation-delay: 10s; width: 3px; height: 3px; }
+        .hero-particles span:nth-child(7) { top: 30%; left: 50%; animation-delay: 3s; }
+        .hero-particles span:nth-child(8) { top: 55%; left: 70%; animation-delay: 7s; width: 4px; height: 4px; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+            50% { transform: translateY(-40px) scale(1.5); opacity: 0.7; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(200, 164, 92, 0.12);
+            border: 1px solid rgba(200, 164, 92, 0.2);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #c8a45c;
+            margin-bottom: 28px;
+            letter-spacing: 0.05em;
+        }
+        .hero-badge .dot {
+            width: 8px; height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .hero h1 { margin-bottom: 20px; }
+        .hero h1 span { background: linear-gradient(135deg, #c8a45c, #e8c97a, #c8a45c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p {
+            font-size: 1.2rem;
+            color: #8892a6;
+            max-width: 620px;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        .hero-stats {
+            display: flex; gap: 48px; margin-top: 64px; padding-top: 40px;
+            border-top: 1px solid rgba(200, 164, 92, 0.12);
+            flex-wrap: wrap;
+        }
+        .hero-stat h4 { font-size: 2rem; color: #c8a45c; margin-bottom: 4px; }
+        .hero-stat p { font-size: 0.85rem; color: #5a6480; margin: 0; }
+
+        /* ========================================
+                   NAV
+                ======================================== */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 16px 0;
+            transition: all 0.3s ease;
+        }
+        nav.scrolled {
+            background: rgba(10, 14, 26, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(200, 164, 92, 0.08);
+            padding: 10px 0;
+        }
+        .nav-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            max-width: 1200px; margin: 0 auto; padding: 0 24px;
+        }
+        .nav-logo {
+            display: flex; align-items: center; gap: 12px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: #ffffff;
+        }
+        .nav-logo .logo-icon {
+            width: 36px; height: 36px;
+            background: linear-gradient(135deg, #c8a45c, #a8853a);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; font-weight: 800; color: #0a0e1a;
+        }
+        .nav-links { display: flex; align-items: center; gap: 32px; }
+        .nav-links a {
+            font-size: 0.9rem; font-weight: 500;
+            color: #8892a6;
+            transition: color 0.2s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: #c8a45c;
+            transition: width 0.3s;
+        }
+        .nav-links a:hover { color: #ffffff; }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta { margin-left: 8px; }
+        .nav-cta .btn { padding: 10px 24px; font-size: 0.85rem; }
+
+        .mobile-toggle {
+            display: none;
+            background: none; border: none;
+            cursor: pointer; padding: 8px;
+            flex-direction: column; gap: 5px;
+        }
+        .mobile-toggle span {
+            display: block;
+            width: 24px; height: 2px;
+            background: #ffffff;
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+        .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .mobile-toggle.active span:nth-child(2) { opacity: 0; }
+        .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* ========================================
+                   SERVICES
+                ======================================== */
+        #services { background: linear-gradient(180deg, #0a0e1a 0%, #0f1424 50%, #0a0e1a 100%); position: relative; }
+        #services::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200, 164, 92, 0.2), transparent);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+        .service-card {
+            background: linear-gradient(180deg, rgba(20, 28, 50, 0.6), rgba(10, 14, 26, 0.6));
+            border: 1px solid rgba(200, 164, 92, 0.08);
+            border-radius: 16px;
+            padding: 48px 36px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #c8a45c, #e8c97a, #c8a45c);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .service-card:hover {
+            border-color: rgba(200, 164, 92, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .service-card:hover::before { opacity: 1; }
+        .service-icon {
+            width: 56px; height: 56px;
+            background: linear-gradient(135deg, rgba(200, 164, 92, 0.15), rgba(200, 164, 92, 0.05));
+            border: 1px solid rgba(200, 164, 92, 0.15);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 24px;
+            font-size: 1.5rem;
+        }
+        .service-card h3 { margin-bottom: 14px; }
+        .service-card p { color: #8892a6; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.7; }
+        .service-features { display: flex; flex-direction: column; gap: 10px; }
+        .service-features li {
+            display: flex; align-items: flex-start; gap: 10px;
+            font-size: 0.9rem; color: #a0a8bb;
+        }
+        .service-features li::before {
+            content: '→';
+            color: #c8a45c;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* ========================================
+                   PROJECTS
+                ======================================== */
+        #projects { background: #0f1424; }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 24px;
+        }
+        .project-card {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            background: rgba(20, 28, 50, 0.4);
+            border: 1px solid rgba(200, 164, 92, 0.06);
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: flex-end;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        .project-card:hover {
+            transform: scale(1.02);
+            border-color: rgba(200, 164, 92, 0.2);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .project-bg {
+            position: absolute; inset: 0;
+            background-size: cover; background-position: center;
+            opacity: 0.3;
+            transition: opacity 0.4s;
+        }
+        .project-card:hover .project-bg { opacity: 0.45; }
+
+        /* Project background patterns/images */
+        .project-card:nth-child(1) .project-bg { background: linear-gradient(135deg, #1a2a4a, #0f1424); }
+        .project-card:nth-child(2) .project-bg { background: linear-gradient(135deg, #2a1a3a, #0f1424); }
+        .project-card:nth-child(3) .project-bg { background: linear-gradient(135deg, #1a3a2a, #0f1424); }
+        .project-card:nth-child(4) .project-bg { background: linear-gradient(135deg, #3a2a1a, #0f1424); }
+        .project-card:nth-child(5) .project-bg { background: linear-gradient(135deg, #1a2a3a, #0f1424); }
+        .project-card:nth-child(6) .project-bg { background: linear-gradient(135deg, #2a2a1a, #0f1424); }
+
+        /* Grid pattern overlay */
+        .project-card .project-bg::after {
+            content: '';
+            position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(200, 164, 92, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(200, 164, 92, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .project-overlay {
+            position: relative;
+            z-index: 1;
+            padding: 32px;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(10, 14, 26, 0.9));
+        }
+        .project-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(200, 164, 92, 0.15);
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #c8a45c;
+            margin-bottom: 10px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .project-overlay h3 { font-size: 1.15rem; }
+        .project-overlay p {
+            font-size: 0.85rem;
+            color: #8892a6;
+            margin-top: 6px;
+        }
+
+        /* ========================================
+                   CERTIFICATIONS
+                ======================================== */
+        #certifications {
+            background: linear-gradient(180deg, #0f1424, #0a0e1a);
+            text-align: center;
+        }
+        .certs-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .cert-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .cert-badge {
+            width: 88px; height: 88px;
+            border: 2px solid rgba(200, 164, 92, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #c8a45c;
+            background: rgba(200, 164, 92, 0.05);
+        }
+        .cert-item span {
+            font-size: 0.85rem;
+            color: #8892a6;
+            font-weight: 500;
+        }
+
+        /* ========================================
+                   ABOUT
+                ======================================== */
+        #about {
+            background: #0a0e1a;
+            position: relative;
+        }
+        #about::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200, 164, 92, 0.15), transparent);
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .about-text p {
+            color: #8892a6;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+        .about-text p:last-child { margin-bottom: 0; }
+        .about-values {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .value-item {
+            padding: 28px;
+            background: rgba(20, 28, 50, 0.4);
+            border: 1px solid rgba(200, 164, 92, 0.06);
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .value-item:hover {
+            border-color: rgba(200, 164, 92, 0.2);
+            transform: translateY(-2px);
+        }
+        .value-item .num {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #c8a45c;
+            margin-bottom: 6px;
+        }
+        .value-item p {
+            font-size: 0.85rem;
+            color: #8892a6;
+        }
+
+        /* ========================================
+                   CONTACT
+                ======================================== */
+        #contact {
+            background: linear-gradient(180deg, #0a0e1a, #0f1424);
+            position: relative;
+        }
+        #contact::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200, 164, 92, 0.15), transparent);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+        .contact-info h3 { margin-bottom: 16px; }
+        .contact-info p { color: #8892a6; margin-bottom: 32px; }
+        .contact-details {
+            display: flex; flex-direction: column; gap: 20px;
+        }
+        .contact-detail {
+            display: flex; align-items: center; gap: 16px;
+        }
+        .contact-detail .icon {
+            width: 48px; height: 48px;
+            background: rgba(200, 164, 92, 0.1);
+            border: 1px solid rgba(200, 164, 92, 0.12);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-detail .label {
+            font-size: 0.8rem;
+            color: #5a6480;
+            margin-bottom: 2px;
+        }
+        .contact-detail .value {
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .contact-detail .value a:hover { color: #c8a45c; }
+
+        .contact-form {
+            background: linear-gradient(180deg, rgba(20, 28, 50, 0.5), rgba(10, 14, 26, 0.5));
+            border: 1px solid rgba(200, 164, 92, 0.1);
+            border-radius: 16px;
+            padding: 40px;
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #a0a8bb;
+            margin-bottom: 8px;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(10, 14, 26, 0.6);
+            border: 1px solid rgba(200, 164, 92, 0.12);
+            border-radius: 8px;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            outline: none;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #c8a45c;
+            box-shadow: 0 0 0 3px rgba(200, 164, 92, 0.1);
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238892a6' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            cursor: pointer;
+        }
+        .form-group select option { background: #0a0e1a; color: #ffffff; }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .contact-form .btn { width: 100%; justify-content: center; }
+
+        /* ========================================
+                   FOOTER
+                ======================================== */
+        footer {
+            background: #0a0e1a;
+            border-top: 1px solid rgba(200, 164, 92, 0.06);
+            padding: 40px 0;
+            text-align: center;
+        }
+        footer p {
+            color: #5a6480;
+            font-size: 0.85rem;
+        }
+        footer .footer-links {
+            display: flex; justify-content: center; gap: 32px; margin-top: 16px; flex-wrap: wrap;
+        }
+        footer .footer-links a {
+            color: #8892a6; font-size: 0.85rem; transition: color 0.2s;
+        }
+        footer .footer-links a:hover { color: #c8a45c; }
+
+        /* ========================================
+                   RESPONSIVE
+                ======================================== */
+        @media (max-width: 768px) {
+            nav { padding: 12px 0; }
+            .nav-links {
+                position: fixed;
+                top: 0; right: -100%;
+                width: 280px; height: 100vh;
+                background: rgba(10, 14, 26, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 80px 32px 32px;
+                gap: 24px;
+                align-items: flex-start;
+                transition: right 0.4s ease;
+                border-left: 1px solid rgba(200, 164, 92, 0.1);
+            }
+            .nav-links.open { right: 0; }
+            .mobile-toggle { display: flex; }
+            .nav-cta { display: none; }
+            .mobile-toggle { position: relative; z-index: 101; }
+
+            section { padding: 64px 0; }
+            .hero { min-height: auto; padding: 100px 0 60px; }
+            .hero-stats { gap: 24px; }
+            .hero-stat h4 { font-size: 1.5rem; }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            .about-values { grid-template-columns: 1fr 1fr; }
+
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .contact-form { padding: 28px; }
+            .form-row { grid-template-columns: 1fr; }
+
+            .services-grid { grid-template-columns: 1fr; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .service-card { padding: 32px 24px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-actions { flex-direction: column; }
+            .hero-actions .btn { width: 100%; justify-content: center; }
+            .hero-stats { flex-direction: column; gap: 16px; }
+            .about-values { grid-template-columns: 1fr; }
+        }
+
+        /* ========================================
+                   ANIMATIONS ON SCROLL
+                ======================================== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
-<nav>
-    <div class="logo">PT GOODYEAR <span>NUSANTARA</span> ENERGY</div>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
-    <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact" class="nav-cta">Contact</a>
-    </div>
-</nav>
 
-<section class="hero">
-    <div class="hero-content">
-        <div class="hero-badge">SKK Migas Registered Vendor</div>
-        <h1>Oil & Gas <span>Exploration</span> & Construction Support<br>Services Indonesia</h1>
-        <p>Delivering seismic exploration, mechanical construction, and civil construction services across Indonesia's oil and gas fields. SKK Migas registered and committed to quality, safety, and timely delivery.</p>
-        <div class="hero-btns">
-            <a href="#services" class="btn btn-primary">Explore Services ↓</a>
-            <a href="#contact" class="btn btn-outline">Contact Us</a>
+    <!-- ============================================
+    NAV
+    ============================================ -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">GN</span>
+                PT Goodyear Nusantara Energy
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <span class="nav-cta">
+                    <a href="#contact" class="btn btn-primary" style="padding:10px 24px;font-size:0.85rem;">Get in Touch</a>
+                </span>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        <div class="hero-strip">
-            <div><strong>50+</strong><span>Projects</span></div>
-            <div><strong>15+</strong><span>Years Exp.</span></div>
-            <div><strong>100%</strong><span>HSE Record</span></div>
-            <div><strong>SK MIGAS</strong><span>Registered</span></div>
-        </div>
-    </div>
-</section>
+    </nav>
 
-<section id="about">
-    <div class="about-grid">
-        <div class="about-text">
-            <div class="section-label">About Us</div>
-            <h2 style="font-size:clamp(24px,3vw,36px);font-weight:800;margin-bottom:20px;">Committed to Excellence in Oil & Gas Services</h2>
-            <p>PT Goodyear Nusantara Energy is an established Indonesian oil and gas service company specializing in seismic exploration, mechanical construction, and civil construction. Our team brings decades of combined experience in the upstream sector.</p>
-            <p>Registered with SKK Migas, we are fully committed to providing high-quality services that meet international standards while adhering to all prevailing laws and regulations of the Republic of Indonesia.</p>
-            <div class="highlight">
-                <p>"Our vision is to be a leading service company in the oil and gas industry through transparent operations, quality execution, and an unwavering commitment to safety in every project."</p>
+    <!-- ============================================
+    HERO
+    ============================================ -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-particles">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
             </div>
         </div>
-        <div class="about-stats">
-            <div class="about-stat"><div class="num">50+</div><div class="lbl">Projects<br>Completed</div></div>
-            <div class="about-stat"><div class="num">15+</div><div class="lbl">Years<br>Experience</div></div>
-            <div class="about-stat"><div class="num">12</div><div class="lbl">Active<br>Contracts</div></div>
-            <div class="about-stat"><div class="num">100%</div><div class="lbl">HSE<br>Compliance</div></div>
-        </div>
-    </div>
-</section>
-
-<section id="services">
-    <div class="section-label" style="text-align:center;">Our Services</div>
-    <div class="section-title" style="text-align:center;">
-        <h2>Comprehensive O&G Support Services</h2>
-        <p style="margin:0 auto;">End-to-end services from exploration through construction for upstream oil and gas operations</p>
-    </div>
-    <div class="services-grid">
-        <div class="service-card">
-            <div class="num">01</div>
-            <h3>🔍 Seismic Exploration</h3>
-            <p>Full-cycle 2D and 3D seismic data acquisition, processing and interpretation.</p>
-            <ul>
-                <li>Survey & Topography</li>
-                <li>Lane Clearing & Access Roads</li>
-                <li>Drilling to Predetermined Depth</li>
-                <li>Recording — Explosive & Air Gun</li>
-                <li>Special Seismic Services</li>
-                <li>Seismic Data Processing & Reprocessing</li>
-            </ul>
-        </div>
-        <div class="service-card">
-            <div class="num">02</div>
-            <h3>⚙️ Mechanical Construction</h3>
-            <p>Industrial mechanical construction for oil and gas production and processing facilities.</p>
-            <ul>
-                <li>Welding & Pipeline Installation</li>
-                <li>Flowline Construction</li>
-                <li>Tank Construction & Storage</li>
-                <li>Metering & Gas Flare Installation</li>
-                <li>CO2 Removal & Skid Installation</li>
-                <li>Sandblasting & Painting</li>
-            </ul>
-        </div>
-        <div class="service-card">
-            <div class="num">03</div>
-            <h3>🏗️ Civil Construction</h3>
-            <p>Infrastructure and facility construction for upstream oil and gas operations.</p>
-            <ul>
-                <li>Wellpad Construction</li>
-                <li>Land Clearing & Cutting</li>
-                <li>Landfilling & Site Preparation</li>
-                <li>Central Processing Plant (CPP)</li>
-                <li>Platform & Access Facilities</li>
-                <li>Drilling Support Infrastructure</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section id="projects">
-    <div class="section-label" style="text-align:center;">Our Projects</div>
-    <div class="section-title" style="text-align:center;">
-        <h2>Project Portfolio</h2>
-        <p style="margin:0 auto;">Delivering quality projects across Indonesia's oil and gas regions</p>
-    </div>
-    <div class="projects-grid">
-        <div class="project-card">
-            <div class="project-img"><div class="region">Sumatera</div><div class="icon">🌋</div></div>
-            <div class="project-info"><h4>3D Seismic Acquisition</h4><p>Client: PHE · 150 km² · 2025-2026</p><span class="tag">Seismic</span></div>
-        </div>
-        <div class="project-card">
-            <div class="project-img"><div class="region">Kalimantan</div><div class="icon">🛢️</div></div>
-            <div class="project-info"><h4>Pipeline Construction</h4><p>Client: BP Tangguh · 12 km flowline · 2024</p><span class="tag">Mechanical</span></div>
-        </div>
-        <div class="project-card">
-            <div class="project-img"><div class="region">Jawa Timur</div><div class="icon">🏗️</div></div>
-            <div class="project-info"><h4>Wellpad Construction</h4><p>Client: Pertamina EP · 6 well pads · 2025</p><span class="tag">Civil</span></div>
-        </div>
-        <div class="project-card">
-            <div class="project-img"><div class="region">Papua</div><div class="icon">🏭</div></div>
-            <div class="project-info"><h4>Facilities Maintenance</h4><p>Client: BP Tangguh · Ongoing 2024-2026</p><span class="tag">Mechanical</span></div>
-        </div>
-        <div class="project-card">
-            <div class="project-img"><div class="region">Riau</div><div class="icon">⚙️</div></div>
-            <div class="project-info"><h4>Mechanical Construction</h4><p>Client: CNOOC Bentu · Tank & piping · 2025</p><span class="tag">Mechanical</span></div>
-        </div>
-        <div class="project-card">
-            <div class="project-img"><div class="region">Sulawesi</div><div class="icon">📊</div></div>
-            <div class="project-info"><h4>Seismic Reprocessing</h4><p>Client: Pertamina · 2D/3D processing · 2025</p><span class="tag">Seismic</span></div>
-        </div>
-    </div>
-</section>
-
-<section id="certifications">
-    <div class="section-label" style="text-align:center;">Certifications</div>
-    <div class="section-title" style="text-align:center;">
-        <h2>Licensed & Certified</h2>
-    </div>
-    <div class="cert-grid">
-        <div class="cert-item"><div class="icon">📜</div><h4>SKK Migas<br>Registered</h4></div>
-        <div class="cert-item"><div class="icon">✅</div><h4>ISO 9001:2015<br>Quality Management</h4></div>
-        <div class="cert-item"><div class="icon">🛡️</div><h4>ISO 45001:2018<br>Occupational Health & Safety</h4></div>
-        <div class="cert-item"><div class="icon">🌱</div><h4>ISO 14001:2015<br>Environmental Management</h4></div>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="section-label">Contact Us</div>
-    <div class="section-title">
-        <h2 style="color:#fff;">Get In Touch</h2>
-        <p style="color:rgba(255,255,255,0.5);">Reach out for partnership inquiries, tender participation, or project discussions</p>
-    </div>
-    <div class="contact-grid">
-        <div class="contact-info">
-            <p>We welcome inquiries regarding seismic exploration, mechanical construction, and civil construction projects across Indonesia. Our team is ready to discuss your project requirements.</p>
-            <div class="contact-detail">
-                <div class="icon">📍</div>
-                <div class="text"><strong>Office</strong><span>Jakarta, Indonesia</span></div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Trusted Oil & Gas Partner
             </div>
-            <div class="contact-detail">
-                <div class="icon">📞</div>
-                <div class="text"><strong>Phone</strong><span>+62 821-1812-9860</span></div>
+            <h1>
+                Powering Indonesia's<br>
+                <span>Energy Future</span>
+            </h1>
+            <p>
+                PT Goodyear Nusantara Energy delivers world-class seismic exploration,
+                mechanical construction, and civil construction services across
+                Indonesia's most demanding oil & gas environments.
+            </p>
+            <div class="hero-actions">
+                <a href="#services" class="btn btn-primary">
+                    Explore Our Services
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M5 10l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
             </div>
-            <div class="contact-detail">
-                <div class="icon">✉️</div>
-                <div class="text"><strong>Email</strong><span>[your email]</span></div>
-            </div>
-            <div class="contact-detail">
-                <div class="icon">📋</div>
-                <div class="text"><strong>SKK Migas</strong><span>Registered Vendor — Active</span></div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <h4>50+</h4>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="hero-stat">
+                    <h4>12+</h4>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="hero-stat">
+                    <h4>6</h4>
+                    <p>Provinces Covered</p>
+                </div>
+                <div class="hero-stat">
+                    <h4>5K+</h4>
+                    <p>Safety Man-Hours</p>
+                </div>
             </div>
         </div>
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for your inquiry. We will contact you shortly.');">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="text" placeholder="Company Name">
-            <input type="text" placeholder="Phone Number">
-            <textarea placeholder="Describe your project or inquiry..." required></textarea>
-            <button type="submit">Send Message →</button>
-        </form>
-    </div>
-</section>
+    </section>
 
-<footer>
-    <div class="social">
-        <a href="#" title="LinkedIn">in</a>
-        <a href="#" title="Email">✉</a>
-    </div>
-    <p>PT Goodyear Nusantara Energy &copy; 2026. All Rights Reserved.</p>
-    <p>Oil and Gas Exploration, Mechanical and Civil Construction Support Services</p>
-    <p style="margin-top:12px;font-size:11px;">SKK Migas Registered Vendor | Indonesia</p>
-</footer>
+    <!-- ============================================
+    SERVICES
+    ============================================ -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">What We Do</span>
+                <h2>Integrated Energy Services</h2>
+                <p>End-to-end solutions from subsurface exploration to surface infrastructure, delivered with uncompromising safety and quality.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-up">
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a45c" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a7 7 0 0 0 0 14 7 7 0 0 0 0-14z" fill="rgba(200,164,92,0.1)"/><path d="M12 16v6M8 22h8"/></svg>
+                    </div>
+                    <h3>Seismic Exploration</h3>
+                    <p>Precision 2D/3D seismic data acquisition, processing, and interpretation for accurate subsurface imaging.</p>
+                    <ul class="service-features">
+                        <li>2D & 3D Seismic Surveys</li>
+                        <li>Land & Transition Zone Operations</li>
+                        <li>Data Processing & Interpretation</li>
+                        <li>Vibroseis & Explosive Source</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a45c" stroke-width="1.5"><path d="M2 22h20"/><path d="M6 18V8l4-2v12M10 6l4-2v14M14 4l4-2v16M18 2l4-2v20"/></svg>
+                    </div>
+                    <h3>Mechanical Construction</h3>
+                    <p>Heavy equipment installation, pipeline fabrication, and mechanical systems for upstream, midstream, and downstream facilities.</p>
+                    <ul class="service-features">
+                        <li>Piping & Pipeline Fabrication</li>
+                        <li>Vessel & Tank Installation</li>
+                        <li>Heavy Equipment Rigging</li>
+                        <li>Pressure System Testing</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a45c" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
+                    </div>
+                    <h3>Civil Construction</h3>
+                    <p>Site preparation, foundation works, access roads, and infrastructure for oil & gas facilities across remote terrains.</p>
+                    <ul class="service-features">
+                        <li>Site Clearing & Earthworks</li>
+                        <li>Foundation & Structural Works</li>
+                        <li>Access Roads & Bridges</li>
+                        <li>Drainage & Erosion Control</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    PROJECTS
+    ============================================ -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Our Track Record</span>
+                <h2>Featured Projects</h2>
+                <p>Delivering excellence across Indonesia's most challenging oil & gas environments.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-up">
+                    <div class="project-bg"></div>
+                    <div class="project-overlay">
+                        <span class="project-tag">Seismic</span>
+                        <h3>Rokan Block 3D Survey</h3>
+                        <p>450 km² land seismic acquisition, Riau — 2024</p>
+                    </div>
+                </div>
+                <div class="project-card fade-up">
+                    <div class="project-bg"></div>
+                    <div class="project-overlay">
+                        <span class="project-tag">Mechanical</span>
+                        <h3>Pipelines — Mahakam Block</h3>
+                        <p>28 km gas pipeline fabrication & installation, East Kalimantan — 2023</p>
+                    </div>
+                </div>
+                <div class="project-card fade-up">
+                    <div class="project-bg"></div>
+                    <div class="project-overlay">
+                        <span class="project-tag">Civil</span>
+                        <h3>Site Prep — Banyu Urip</h3>
+                        <p>Full earthworks & foundation for processing facilities, Bojonegoro — 2023</p>
+                    </div>
+                </div>
+                <div class="project-card fade-up">
+                    <div class="project-bg"></div>
+                    <div class="project-overlay">
+                        <span class="project-tag">Seismic</span>
+                        <h3>2D Seismic — Seram Island</h3>
+                        <p>200 km 2D acquisition in remote mountainous terrain, Maluku — 2022</p>
+                    </div>
+                </div>
+                <div class="project-card fade-up">
+                    <div class="project-bg"></div>
+                    <div class="project-overlay">
+                        <span class="project-tag">Mechanical</span>
+                        <h3>Gas Lift Compression — Duri</h3>
+                        <p>Compressor station mechanical installation & commissioning, Riau — 2022</p>
+                    </div>
+                </div>
+                <div class="project-card fade-up">
+                    <div class="project-bg"></div>
+                    <div class="project-overlay">
+                        <span class="project-tag">Civil</span>
+                        <h3>Access Roads — Sanga-Sanga</h3>
+                        <p>12 km heavy-haul access road network, Kutai Kartanegara — 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    CERTIFICATIONS
+    ============================================ -->
+    <section id="certifications">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Certified & Approved</span>
+                <h2>Industry Certifications</h2>
+                <p>Fully licensed and certified to operate in Indonesia's oil & gas sector.</p>
+            </div>
+            <div class="certs-grid fade-up">
+                <div class="cert-item">
+                    <div class="cert-badge">SK</div>
+                    <span>SKK Migas Registered</span>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-badge">ISO</div>
+                    <span>ISO 9001:2015</span>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-badge">SMK3</div>
+                    <span>SMK3 Certification</span>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-badge">K3</div>
+                    <span>K3 Construction Safety</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    ABOUT
+    ============================================ -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Who We Are</span>
+                <h2>Built for the Challenge</h2>
+                <p>A team of experienced professionals committed to operational excellence in Indonesia's oil & gas sector.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text fade-up">
+                    <p>
+                        PT Goodyear Nusantara Energy brings together decades of combined experience
+                        in Indonesia's upstream oil & gas industry. Founded by industry veterans,
+                        we understand the unique challenges of operating across the archipelago —
+                        from the dense jungles of Sumatra to the remote islands of eastern Indonesia.
+                    </p>
+                    <p>
+                        Our team combines international best practices with deep local knowledge,
+                        ensuring every project is executed with the highest standards of safety,
+                        quality, and environmental stewardship.
+                    </p>
+                    <p>
+                        We are registered with SKK Migas and maintain ISO 9001:2015 certification
+                        across all operations. Our commitment to HSE excellence has earned us
+                        a 5,000+ hour record without Lost Time Incident.
+                    </p>
+                </div>
+                <div class="about-values fade-up">
+                    <div class="value-item">
+                        <div class="num">50+</div>
+                        <p>Industry Professionals</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="num">100%</div>
+                        <p>HSE Compliance</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="num">12+</div>
+                        <p>Years Operating</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="num">6</div>
+                        <p>Regional Offices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    CONTACT
+    ============================================ -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Get in Touch</span>
+                <h2>Ready to Partner?</h2>
+                <p>Reach out to discuss your project requirements or partnership opportunities.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info fade-up">
+                    <h3>Contact Information</h3>
+                    <p>Our team is ready to respond to your inquiry within 24 hours.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8a45c" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div>
+                                <div class="label">Email</div>
+                                <div class="value"><a href="mailto:contact@goodyearenergy.com">contact@goodyearenergy.com</a></div>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8a45c" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <div class="label">Phone</div>
+                                <div class="value"><a href="tel:+6282118129860">+62 821-1812-9860</a></div>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8a45c" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <div class="label">Office</div>
+                                <div class="value">Jakarta, Indonesia</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form fade-up" id="contactForm" action="https://formsubmit.co/contact@goodyearenergy.com" method="POST">
+                    <input type="hidden" name="_subject" value="Website Inquiry — PT Goodyear Nusantara Energy">
+                    <input type="hidden" name="_next" value="https://thomaskeren90.github.io/migas/thank-you.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">Company (optional)</label>
+                            <input type="text" id="company" name="company" placeholder="Your company">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone (optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+62 xxx">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interest</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service...</option>
+                            <option value="Seismic Exploration">Seismic Exploration</option>
+                            <option value="Mechanical Construction">Mechanical Construction</option>
+                            <option value="Civil Construction">Civil Construction</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Partnership">Partnership</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Tell us about your project requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Send Message
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 8h12M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    FOOTER
+    ============================================ -->
+    <footer>
+        <div class="container">
+            <p>© 2026 PT Goodyear Nusantara Energy. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+    SCRIPTS
+    ============================================ -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Mobile menu toggle
+        const toggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('active');
+            navLinks.classList.toggle('open');
+            document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+        });
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                toggle.classList.remove('active');
+                navLinks.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Fade-up scroll animation
+        const fadeElements = document.querySelectorAll('.fade-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Contact form (prevents actual submit for demo)
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            // Let the form submit to FormSubmit.co as configured
+            // This is just to show a loading state
+            const btn = this.querySelector('.btn');
+            const original = btn.innerHTML;
+            btn.innerHTML = 'Sending...';
+            btn.disabled = true;
+            // FormSubmit will handle the redirect
+        });
+    </script>
 </body>
 </html>
