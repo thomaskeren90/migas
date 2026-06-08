@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Goodyear Nusantara Energy — Oil & Gas Services</title>
+    <meta name="description" content="Oil and Gas Exploration, Mechanical Construction and Civil Construction Support Services Company Indonesia. SKK Migas registered.">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background: #fff; overflow-x: hidden; }
+        nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10,10,30,0.92); backdrop-filter: blur(16px); padding: 0 6%; height: 76px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        nav .logo { font-weight: 800; font-size: 14px; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
+        nav .logo span { color: #d4a017; }
+        nav .nav-links { display: flex; gap: 32px; align-items: center; }
+        nav .nav-links a { text-decoration: none; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 500; transition: .3s; letter-spacing: 0.5px; text-transform: uppercase; }
+        nav .nav-links a:hover { color: #d4a017; }
+        nav .nav-cta { background: #d4a017; color: #0a0a1a !important; padding: 10px 24px; border-radius: 6px; font-weight: 600 !important; }
+        .menu-toggle { display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: #fff; }
+        @media (max-width: 900px) { .menu-toggle { display: block; } .nav-links { display: none !important; } .nav-links.active { display: flex !important; flex-direction: column; position: absolute; top: 76px; left: 0; width: 100%; background: rgba(10,10,30,0.98); padding: 24px 6%; gap: 16px; } }
+        .hero { min-height: 100vh; display: flex; align-items: center; position: relative; background: linear-gradient(135deg, #070714 0%, #12123a 40%, #0a0a20 100%); overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a017' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); opacity: 0.5; }
+        .hero-content { position: relative; z-index: 1; padding: 0 6%; max-width: 1400px; width: 100%; }
+        .hero-badge { display: inline-block; padding: 8px 20px; border-radius: 100px; background: rgba(212,160,23,0.12); border: 1px solid rgba(212,160,23,0.2); color: #d4a017; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 28px; }
+        .hero h1 { font-size: clamp(36px, 6vw, 72px); font-weight: 800; color: #fff; line-height: 1.08; margin-bottom: 24px; max-width: 800px; }
+        .hero h1 span { color: #d4a017; }
+        .hero p { font-size: 18px; color: rgba(255,255,255,0.55); max-width: 600px; line-height: 1.8; margin-bottom: 40px; }
+        .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+        .btn { padding: 16px 36px; border-radius: 8px; font-weight: 600; font-size: 14px; text-decoration: none; transition: all .3s; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-primary { background: #d4a017; color: #0a0a1a; }
+        .btn-primary:hover { background: #e6b42a; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,160,23,0.3); }
+        .btn-outline { border: 2px solid rgba(255,255,255,0.15); color: #fff; }
+        .btn-outline:hover { border-color: #d4a017; color: #d4a017; background: rgba(212,160,23,0.05); }
+        .hero-strip { display: flex; gap: 60px; margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.06); }
+        .hero-strip strong { display: block; font-size: 28px; color: #d4a017; font-weight: 800; }
+        .hero-strip span { font-size: 13px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; }
+        @media (max-width: 600px) { .hero-strip { flex-wrap: wrap; gap: 30px; } }
+        section { padding: 120px 6%; }
+        .section-label { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #d4a017; font-weight: 600; margin-bottom: 12px; }
+        .section-title h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: 800; color: #1a1a2e; margin-bottom: 16px; line-height: 1.2; }
+        .section-title p { color: #888; max-width: 560px; font-size: 16px; line-height: 1.8; }
+        #about { background: #f8f9fc; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; max-width: 1200px; margin: 0 auto; align-items: center; }
+        .about-text p { color: #666; line-height: 1.9; margin-bottom: 20px; font-size: 15px; }
+        .about-text .highlight { background: #fff; padding: 24px; border-radius: 12px; border-left: 4px solid #d4a017; margin: 24px 0; }
+        .about-text .highlight p { margin-bottom: 0; font-size: 14px; color: #555; font-style: italic; }
+        .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .about-stat { text-align: center; padding: 32px 20px; background: #fff; border-radius: 16px; box-shadow: 0 2px 20px rgba(0,0,0,0.04); }
+        .about-stat .num { font-size: 40px; font-weight: 800; color: #d4a017; font-family: 'Playfair Display', serif; }
+        .about-stat .lbl { font-size: 13px; color: #888; margin-top: 4px; }
+        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1200px; margin: 40px auto 0; }
+        .service-card { background: #fff; border-radius: 20px; padding: 44px 36px; box-shadow: 0 2px 30px rgba(0,0,0,0.04); border: 1px solid #f0f0f0; transition: all .4s; position: relative; overflow: hidden; }
+        .service-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #d4a017, #e6b42a); transform: scaleX(0); transform-origin: left; transition: transform .4s; }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
+        .service-card:hover::after { transform: scaleX(1); }
+        .service-card .num { font-family: 'Playfair Display', serif; font-size: 48px; color: #f0f0f0; font-weight: 700; margin-bottom: 8px; line-height: 1; }
+        .service-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 14px; color: #1a1a2e; }
+        .service-card p { color: #888; font-size: 14px; line-height: 1.7; margin-bottom: 20px; }
+        .service-card ul { list-style: none; }
+        .service-card ul li { padding: 7px 0; font-size: 13px; color: #666; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #f5f5f5; }
+        .service-card ul li:last-child { border-bottom: none; }
+        .service-card ul li::before { content: '→'; color: #d4a017; font-weight: 700; }
+        @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
+        #projects { background: #f8f9fc; }
+        .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1200px; margin: 40px auto 0; }
+        .project-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.04); transition: .4s; }
+        .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+        .project-img { height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #1a1a3e, #2a2a5e); color: #d4a017; font-weight: 600; font-size: 13px; }
+        .project-img .region { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 8px; }
+        .project-img .icon { font-size: 32px; margin-bottom: 8px; }
+        .project-info { padding: 24px; }
+        .project-info h4 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+        .project-info p { font-size: 13px; color: #888; line-height: 1.6; }
+        .project-info .tag { display: inline-block; padding: 4px 10px; border-radius: 4px; background: #fef3e2; color: #d4a017; font-size: 11px; font-weight: 600; margin-top: 10px; }
+        @media (max-width: 900px) { .projects-grid { grid-template-columns: 1fr; } }
+        #certifications { text-align: center; }
+        .cert-grid { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
+        .cert-item { text-align: center; padding: 30px 40px; border-radius: 12px; background: #f8f9fc; min-width: 160px; }
+        .cert-item .icon { font-size: 36px; margin-bottom: 12px; }
+        .cert-item h4 { font-size: 14px; font-weight: 600; color: #1a1a2e; }
+        #contact { background: linear-gradient(135deg, #070714, #12123a); color: #fff; padding: 120px 6% 80px; }
+        #contact .section-label { color: #d4a017; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; max-width: 1200px; margin: 40px auto 0; }
+        .contact-info p { color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 32px; font-size: 15px; max-width: 500px; }
+        .contact-detail { display: flex; gap: 16px; margin-bottom: 20px; }
+        .contact-detail .icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(212,160,23,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
+        .contact-detail .text strong { display: block; font-size: 14px; margin-bottom: 2px; color: #fff; }
+        .contact-detail .text span { font-size: 14px; color: rgba(255,255,255,0.55); }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 16px 18px; border-radius: 10px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; color: #fff; margin-bottom: 16px; transition: .3s; }
+        .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,0.3); }
+        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: #d4a017; background: rgba(212,160,23,0.06); }
+        .contact-form textarea { height: 120px; resize: vertical; }
+        .contact-form button { width: 100%; padding: 16px; border: none; border-radius: 10px; background: #d4a017; color: #0a0a1a; font-weight: 700; font-size: 15px; cursor: pointer; transition: .3s; }
+        .contact-form button:hover { background: #e6b42a; }
+        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
+        footer { background: #03030a; color: rgba(255,255,255,0.4); padding: 40px 6%; text-align: center; font-size: 13px; }
+        footer .social { display: flex; gap: 16px; justify-content: center; margin-bottom: 20px; }
+        footer .social a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; text-decoration: none; color: rgba(255,255,255,0.4); transition: .3s; font-size: 16px; }
+        footer .social a:hover { background: #d4a017; color: #0a0a1a; }
+        footer p { margin-bottom: 4px; }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="logo">PT GOODYEAR <span>NUSANTARA</span> ENERGY</div>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">SKK Migas Registered Vendor</div>
+        <h1>Oil & Gas <span>Exploration</span> & Construction Support<br>Services Indonesia</h1>
+        <p>Delivering seismic exploration, mechanical construction, and civil construction services across Indonesia's oil and gas fields. SKK Migas registered and committed to quality, safety, and timely delivery.</p>
+        <div class="hero-btns">
+            <a href="#services" class="btn btn-primary">Explore Services ↓</a>
+            <a href="#contact" class="btn btn-outline">Contact Us</a>
+        </div>
+        <div class="hero-strip">
+            <div><strong>50+</strong><span>Projects</span></div>
+            <div><strong>15+</strong><span>Years Exp.</span></div>
+            <div><strong>100%</strong><span>HSE Record</span></div>
+            <div><strong>SK MIGAS</strong><span>Registered</span></div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="about-grid">
+        <div class="about-text">
+            <div class="section-label">About Us</div>
+            <h2 style="font-size:clamp(24px,3vw,36px);font-weight:800;margin-bottom:20px;">Committed to Excellence in Oil & Gas Services</h2>
+            <p>PT Goodyear Nusantara Energy is an established Indonesian oil and gas service company specializing in seismic exploration, mechanical construction, and civil construction. Our team brings decades of combined experience in the upstream sector.</p>
+            <p>Registered with SKK Migas, we are fully committed to providing high-quality services that meet international standards while adhering to all prevailing laws and regulations of the Republic of Indonesia.</p>
+            <div class="highlight">
+                <p>"Our vision is to be a leading service company in the oil and gas industry through transparent operations, quality execution, and an unwavering commitment to safety in every project."</p>
+            </div>
+        </div>
+        <div class="about-stats">
+            <div class="about-stat"><div class="num">50+</div><div class="lbl">Projects<br>Completed</div></div>
+            <div class="about-stat"><div class="num">15+</div><div class="lbl">Years<br>Experience</div></div>
+            <div class="about-stat"><div class="num">12</div><div class="lbl">Active<br>Contracts</div></div>
+            <div class="about-stat"><div class="num">100%</div><div class="lbl">HSE<br>Compliance</div></div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="section-label" style="text-align:center;">Our Services</div>
+    <div class="section-title" style="text-align:center;">
+        <h2>Comprehensive O&G Support Services</h2>
+        <p style="margin:0 auto;">End-to-end services from exploration through construction for upstream oil and gas operations</p>
+    </div>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="num">01</div>
+            <h3>🔍 Seismic Exploration</h3>
+            <p>Full-cycle 2D and 3D seismic data acquisition, processing and interpretation.</p>
+            <ul>
+                <li>Survey & Topography</li>
+                <li>Lane Clearing & Access Roads</li>
+                <li>Drilling to Predetermined Depth</li>
+                <li>Recording — Explosive & Air Gun</li>
+                <li>Special Seismic Services</li>
+                <li>Seismic Data Processing & Reprocessing</li>
+            </ul>
+        </div>
+        <div class="service-card">
+            <div class="num">02</div>
+            <h3>⚙️ Mechanical Construction</h3>
+            <p>Industrial mechanical construction for oil and gas production and processing facilities.</p>
+            <ul>
+                <li>Welding & Pipeline Installation</li>
+                <li>Flowline Construction</li>
+                <li>Tank Construction & Storage</li>
+                <li>Metering & Gas Flare Installation</li>
+                <li>CO2 Removal & Skid Installation</li>
+                <li>Sandblasting & Painting</li>
+            </ul>
+        </div>
+        <div class="service-card">
+            <div class="num">03</div>
+            <h3>🏗️ Civil Construction</h3>
+            <p>Infrastructure and facility construction for upstream oil and gas operations.</p>
+            <ul>
+                <li>Wellpad Construction</li>
+                <li>Land Clearing & Cutting</li>
+                <li>Landfilling & Site Preparation</li>
+                <li>Central Processing Plant (CPP)</li>
+                <li>Platform & Access Facilities</li>
+                <li>Drilling Support Infrastructure</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="section-label" style="text-align:center;">Our Projects</div>
+    <div class="section-title" style="text-align:center;">
+        <h2>Project Portfolio</h2>
+        <p style="margin:0 auto;">Delivering quality projects across Indonesia's oil and gas regions</p>
+    </div>
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-img"><div class="region">Sumatera</div><div class="icon">🌋</div></div>
+            <div class="project-info"><h4>3D Seismic Acquisition</h4><p>Client: PHE · 150 km² · 2025-2026</p><span class="tag">Seismic</span></div>
+        </div>
+        <div class="project-card">
+            <div class="project-img"><div class="region">Kalimantan</div><div class="icon">🛢️</div></div>
+            <div class="project-info"><h4>Pipeline Construction</h4><p>Client: BP Tangguh · 12 km flowline · 2024</p><span class="tag">Mechanical</span></div>
+        </div>
+        <div class="project-card">
+            <div class="project-img"><div class="region">Jawa Timur</div><div class="icon">🏗️</div></div>
+            <div class="project-info"><h4>Wellpad Construction</h4><p>Client: Pertamina EP · 6 well pads · 2025</p><span class="tag">Civil</span></div>
+        </div>
+        <div class="project-card">
+            <div class="project-img"><div class="region">Papua</div><div class="icon">🏭</div></div>
+            <div class="project-info"><h4>Facilities Maintenance</h4><p>Client: BP Tangguh · Ongoing 2024-2026</p><span class="tag">Mechanical</span></div>
+        </div>
+        <div class="project-card">
+            <div class="project-img"><div class="region">Riau</div><div class="icon">⚙️</div></div>
+            <div class="project-info"><h4>Mechanical Construction</h4><p>Client: CNOOC Bentu · Tank & piping · 2025</p><span class="tag">Mechanical</span></div>
+        </div>
+        <div class="project-card">
+            <div class="project-img"><div class="region">Sulawesi</div><div class="icon">📊</div></div>
+            <div class="project-info"><h4>Seismic Reprocessing</h4><p>Client: Pertamina · 2D/3D processing · 2025</p><span class="tag">Seismic</span></div>
+        </div>
+    </div>
+</section>
+
+<section id="certifications">
+    <div class="section-label" style="text-align:center;">Certifications</div>
+    <div class="section-title" style="text-align:center;">
+        <h2>Licensed & Certified</h2>
+    </div>
+    <div class="cert-grid">
+        <div class="cert-item"><div class="icon">📜</div><h4>SKK Migas<br>Registered</h4></div>
+        <div class="cert-item"><div class="icon">✅</div><h4>ISO 9001:2015<br>Quality Management</h4></div>
+        <div class="cert-item"><div class="icon">🛡️</div><h4>ISO 45001:2018<br>Occupational Health & Safety</h4></div>
+        <div class="cert-item"><div class="icon">🌱</div><h4>ISO 14001:2015<br>Environmental Management</h4></div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="section-label">Contact Us</div>
+    <div class="section-title">
+        <h2 style="color:#fff;">Get In Touch</h2>
+        <p style="color:rgba(255,255,255,0.5);">Reach out for partnership inquiries, tender participation, or project discussions</p>
+    </div>
+    <div class="contact-grid">
+        <div class="contact-info">
+            <p>We welcome inquiries regarding seismic exploration, mechanical construction, and civil construction projects across Indonesia. Our team is ready to discuss your project requirements.</p>
+            <div class="contact-detail">
+                <div class="icon">📍</div>
+                <div class="text"><strong>Office</strong><span>Jakarta, Indonesia</span></div>
+            </div>
+            <div class="contact-detail">
+                <div class="icon">📞</div>
+                <div class="text"><strong>Phone</strong><span>+62 821-1812-9860</span></div>
+            </div>
+            <div class="contact-detail">
+                <div class="icon">✉️</div>
+                <div class="text"><strong>Email</strong><span>[your email]</span></div>
+            </div>
+            <div class="contact-detail">
+                <div class="icon">📋</div>
+                <div class="text"><strong>SKK Migas</strong><span>Registered Vendor — Active</span></div>
+            </div>
+        </div>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for your inquiry. We will contact you shortly.');">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Company Name">
+            <input type="text" placeholder="Phone Number">
+            <textarea placeholder="Describe your project or inquiry..." required></textarea>
+            <button type="submit">Send Message →</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="social">
+        <a href="#" title="LinkedIn">in</a>
+        <a href="#" title="Email">✉</a>
+    </div>
+    <p>PT Goodyear Nusantara Energy &copy; 2026. All Rights Reserved.</p>
+    <p>Oil and Gas Exploration, Mechanical and Civil Construction Support Services</p>
+    <p style="margin-top:12px;font-size:11px;">SKK Migas Registered Vendor | Indonesia</p>
+</footer>
+</body>
+</html>
